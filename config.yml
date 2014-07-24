@@ -30,33 +30,33 @@ bootstrap:
     - buttons
 
 # Components
-    # - component-animations
-    # - dropdowns
-    # - button-groups
-    # - input-groups
-    # - navs
-    # - navbar
-    # - breadcrumbs
-    # - pagination
-    # - pager
-    # - labels
-    # - badges
-    # - jumbotron
-    # - thumbnails
-    # - alerts
-    # - progress-bars
-    # - media
-    # - list-group
-    # - panels
-    # - responsive-embed
-    # - wells
-    # - close
+    - component-animations
+    - dropdowns
+    - button-groups
+    - input-groups
+    - navs
+    - navbar
+    - breadcrumbs
+    - pagination
+    - pager
+    - labels
+    - badges
+    - jumbotron
+    - thumbnails
+    - alerts
+    - progress-bars
+    - media
+    - list-group
+    - panels
+    - responsive-embed
+    - wells
+    - close
 
 # Components w/ JavaScript
-    # - modals
-    # - tooltip
-    # - popovers
-    # - carousel
+    - modals
+    - tooltip
+    - popovers
+    - carousel
 
 # Utility classes
     - utilities
