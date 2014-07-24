@@ -37,12 +37,7 @@ gulp.task('default', function() {
 })
 
 gulp.task('bootstrap', function() {
-    var paths = {
-        less: 'node_modules/bootstrap/less/**'
-    }
-
-    return gulp.src(paths.less).pipe(gulp.dest('bootstrap/less'));
-
+    return gulp.src('node_modules/bootstrap/less/**').pipe(gulp.dest('bootstrap/less'));
 })
 
 gulp.task('init', ['bootstrap'], function() {
