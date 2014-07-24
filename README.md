@@ -9,31 +9,74 @@ Used to make a bootstrap-based css-file with only the parts of bootstrap that yo
 npm i
 ```
 
-Then modify the bootstrap-array in package.json with the less-files you want to include from bootstrap.
+Then comment in/out the less-files you want to include from bootstrap in config.yml
 
-```json
-"bootstrap": [
-  "variables",
-  "mixins",
-  "normalize",
-  "scaffolding",
-  "grid"
-]
+```yaml
+bootstrap:
+# Core variables and mixins
+    - variables
+    - mixins
+
+# Reset and dependencies
+    - normalize
+    - print
+    - glyphicons
+
+# Core CSS
+    - scaffolding
+    - type
+    - code
+    - grid
+    - tables
+    - forms
+    - buttons
+
+# Components
+    # - component-animations
+    # - dropdowns
+    # - button-groups
+    # - input-groups
+    # - navs
+    # - navbar
+    # - breadcrumbs
+    # - pagination
+    # - pager
+    # - labels
+    # - badges
+    # - jumbotron
+    # - thumbnails
+    # - alerts
+    # - progress-bars
+    # - media
+    # - list-group
+    # - panels
+    # - responsive-embed
+    # - wells
+    # - close
+
+# Components w/ JavaScript
+    # - modals
+    # - tooltip
+    # - popovers
+    # - carousel
+
+# Utility classes
+    - utilities
+    - responsive-utilities
 ```
 
 …and the browsers you want to support (used by autoprefixer)
 
-```json
-"browsers": [
-  "Android 2.3",
-  "Android >= 4",
-  "Chrome >= 20",
-  "Firefox >= 24",
-  "Explorer >= 9",
-  "iOS >= 6",
-  "Opera >= 12",
-  "Safari >= 6"
-]
+```yaml
+browsers:
+    - Android 2.3
+    - Android >= 4
+    - Chrome >= 20
+    - Firefox >= 24
+    - Explorer >= 9
+    - iOS >= 6
+    - Opera >= 12
+    - Safari >= 6
 ```
 
 Start by running ```gulp init```. This copies the less-files from ```./node_modules/bootstrap/less``` to ```./bootstrap/less```, and then copies "variables.less" and "theme.less" to ```./theme```. These are the files you want to modify.

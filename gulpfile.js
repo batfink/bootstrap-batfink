@@ -8,10 +8,15 @@ var concat = require('gulp-concat');
 var debug = require('gulp-debug');
 var tap = require('gulp-tap');
 var fs = require('fs');
+var yaml = require('js-yaml');
+
+
 
 gulp.task('default', function() {
 
-    var files = pkg.bootstrap.map(function(file) {
+    var config = yaml.load(fs.readFileSync('config.yml'));
+
+    var files = config.bootstrap.map(function(file) {
         return path.join('./bootstrap/less/', file + '.less');
     });
 
@@ -25,7 +30,7 @@ gulp.task('default', function() {
         .pipe(sourcemaps.init())
         .pipe(concat('bootstrap-modified.less'))
         .pipe(less())
-        .pipe(autoprefixer(pkg.browsers))
+        .pipe(autoprefixer(config.browsers))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./dist/css'));
 

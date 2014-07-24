@@ -1,0 +1,63 @@
+# The browsers to support
+browsers:
+    - Android 2.3
+    - Android >= 4
+    - Chrome >= 20
+    - Firefox >= 24
+    - Explorer >= 9
+    - iOS >= 6
+    - Opera >= 12
+    - Safari >= 6
+
+# The bootstrap less-files to include
+bootstrap:
+# Core variables and mixins
+    - variables
+    - mixins
+
+# Reset and dependencies
+    - normalize
+    - print
+    - glyphicons
+
+# Core CSS
+    - scaffolding
+    - type
+    - code
+    - grid
+    - tables
+    - forms
+    - buttons
+
+# Components
+    # - component-animations
+    # - dropdowns
+    # - button-groups
+    # - input-groups
+    # - navs
+    # - navbar
+    # - breadcrumbs
+    # - pagination
+    # - pager
+    # - labels
+    # - badges
+    # - jumbotron
+    # - thumbnails
+    # - alerts
+    # - progress-bars
+    # - media
+    # - list-group
+    # - panels
+    # - responsive-embed
+    # - wells
+    # - close
+
+# Components w/ JavaScript
+    # - modals
+    # - tooltip
+    # - popovers
+    # - carousel
+
+# Utility classes
+    - utilities
+    - responsive-utilities
