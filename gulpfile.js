@@ -61,7 +61,7 @@ gulp.task('downloadThemePreviewFile', function() {
             $('head').append('<link rel="stylesheet" href="css/bootstrap.css">\n');
             $('head').append('<link rel="stylesheet" href="css/theme.css">\n');
         }))
-        .pipe(replace(/<!(<!-{2})([^\-]|-[^\-])*(-{2}>)/g, ""))
+        .pipe(replace(/<!-{2}\s?([^\-]-?[^\-])+\s?-{2}>\n{2}?/g, ""))
         .pipe(gulp.dest('dev'))
 })
 
